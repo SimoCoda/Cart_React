@@ -1,4 +1,5 @@
 import {useGlobalContext} from '../context/context.jsx'
+import formatNumber from "../utils/formatNumber.jsx"
 
 const TotalBox = () => {
   const {total} = useGlobalContext()
@@ -9,7 +10,7 @@ const TotalBox = () => {
       </header>
       <hr />
       <div className="card-content">
-        <h4>{total} €</h4>
+        <h4>{formatNumber(total)}</h4>
       </div>
       <hr />
       <footer className="card-footer">
